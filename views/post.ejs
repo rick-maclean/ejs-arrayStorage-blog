@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+ 
+<div class="box" id="heading">
+    <h1>Post</h1>
+    
+</div>
+
+<div class="box">
+    <% let title = foundPost.title; let content = foundPost.postBody%>
+    <h3><%=title%></h3>
+    <p><%=content%></p>
+</div>
+
+
+    
+<%- include('partials/footer'); -%>

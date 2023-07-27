@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%>
+ 
+<div>
+    <h1>Home Page</h1>
+    
+</div>
+
+<!-- <div>
+    <p>This is the HOME page</p>
+</div> -->
+
+<div>
+    <p><%=homeStartingContent%> </p>
+</div>
+
+<div>
+    <%if (posts.length >= 1) {%>
+        <h2>Posts</h2>
+    <%}%>
+    <!-- Note the following was nice but I was not sure how to 
+        have the elipsis thing done on the content so did the p element 
+        below
+    -->
+    <!-- <dl>
+        <%posts.forEach((post) => {%>
+            <% let title = post.title; let content = post.postBody%>
+                <dt><%=title%></dt>
+                <dd>-     <%=content%></dd>
+                <br>
+            <%} )%>
+    </dl> -->
+    <div class="overflow-auto">
+        <%posts.forEach((post) => {%>
+            <% let title = post.title; let content = post.postBody.substring(0, 125) + ' ... '%>
+            <h3 id="<%=title%>"><a href="/post/<%=title%>"><%=title%></a></h3>
+            <p class="postBodyHomePage"><%=content%> <a href="/post/<%=title%>">Read more</a></p>
+            <%} )%>
+    </div>
+</div>
+
+    
+<%- include('partials/footer'); -%>

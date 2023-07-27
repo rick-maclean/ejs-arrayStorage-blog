@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+ 
+<div class="box" id="heading">
+    <h3>Compose</h3>
+    
+</div>
+
+<!-- Note is was important to have the element be a form to contain the data. Otherwise it 
+would not POST correctly.-->
+<form class="item" action="/compose" method="post">
+    <div class="form-group">
+        <label class="labelPadding" for="postTitle">Title</label>
+        <input class="form-control" type="text" name="postTitle" size="100">
+        <br><label class="labelPadding" for="postBody">Post</label>
+        <textarea class="form-control" name="postBody" rows="8" id="postBody"></textarea>
+    </div>
+    <button type="submit" name="Publish" class="btn btn-primary">Publish</button>
+</form>
+
+    
+<%- include('partials/footer'); -%>
