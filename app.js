@@ -23,7 +23,7 @@ app.use(express.static("public"));
 
 
 //modification to have it run on hosting service
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 // app.listen(PORT, function() {
 //   console.log('Server started on port ${PORT}');
 // });
